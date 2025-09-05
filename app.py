@@ -10,6 +10,7 @@ PROFILE = {
     "socials": {
         "Instagram": "https://www.instagram.com/lingga_aliffansyah?igsh=MXU1aDIybWhtOHU1Ng==",
         "LinkedIn": "https://www.linkedin.com/in/lingga-aliff-431702376/",
+        "GITHUB": "https://github.com/LinggaAliff28/LinggaAliff28",
     },
     "experience": [
         {
