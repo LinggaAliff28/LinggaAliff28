@@ -16,19 +16,19 @@ PROFILE = {
             "role": "Asisten Praktikum Cloud Computing",
             "company": "Telkom University",
             "year": "2024-2025",
-            "desc": "Membimbing mahasiswa dalam memahami konsep dasar dan implementasi layanan cloud computing (IaaS, PaaS, SaaS). Memberikan arahan penggunaan platform cloud seperti AWS, Google Cloud, atau Azure untuk kebutuhan praktikum. Membantu dalam troubleshooting, debugging, serta optimalisasi infrastruktur cloud mahasiswa. Serta berkontribusi dalam penyusunan modul praktikum dan evaluasi hasil praktikan.",
+            "desc": "Membimbing mahasiswa dalam memahami konsep dasar dan implementasi layanan cloud computing (IaaS, PaaS, SaaS).Memberikan arahan penggunaan platform cloud seperti AWS, Google Cloud, atau Azure untuk kebutuhan praktikum.Membantu dalam troubleshooting, debugging, serta optimalisasi infrastruktur cloud mahasiswa. Serta berkontribusi dalam penyusunan modul praktikum dan evaluasi hasil praktikan.",
         },
         {
             "role": "Asisten Algoritma dan bengkel pemograman",
             "company": "Telkom University",
             "year": "2024-2025",
-            "desc": "Membantu mahasiswa dalam memahami konsep dasar algoritma, struktur data, serta implementasinya menggunakan bahasa pemrograman (C/Python). Membimbing praktikum pemecahan masalah, logika pemrograman, dan efisiensi algoritma. Memberikan umpan balik dan membantu debugging kode program mahasiswa. Serta Berperan aktif dalam evaluasi dan pengembangan modul praktikum.",
+            "desc": "Membantu mahasiswa dalam memahami konsep dasar algoritma, struktur data, serta implementasinya menggunakan bahasa pemrograman (C/Python).Membimbing praktikum pemecahan masalah, logika pemrograman, dan efisiensi algoritma.Memberikan umpan balik dan membantu debugging kode program mahasiswa.Serta Berperan aktif dalam evaluasi dan pengembangan modul praktikum.",
         },
         {
             "role": "Intern - Hardware Engineer",
             "company": "Telkom University",
             "year": "2025",
-            "desc": "Terlibat dalam perancangan, pengujian, dan analisis rangkaian elektronik berbasis mikrokontroler. Membantu proses debugging dan troubleshooting perangkat keras untuk memastikan sistem berjalan stabil. Melakukan dokumentasi hasil uji coba, analisis performa, dan perbaikan hardware. Mendukung tim dalam integrasi perangkat keras dengan sistem IoT dan jaringan telekomunikasi. Berkontribusi pada penelitian dan pengembangan (R&D) untuk meningkatkan kinerja perangkat.",
+            "desc": "Terlibat dalam perancangan, pengujian, dan analisis rangkaian elektronik berbasis mikrokontroler.Membantu proses debugging dan troubleshooting perangkat keras untuk memastikan sistem berjalan stabil.Melakukan dokumentasi hasil uji coba, analisis performa, dan perbaikan hardware.Mendukung tim dalam integrasi perangkat keras dengan sistem IoT dan jaringan telekomunikasi.Berkontribusi pada penelitian dan pengembangan (R&D) untuk meningkatkan kinerja perangkat.",
         },
     ],
     "projects": [
@@ -48,7 +48,7 @@ PROFILE = {
     }
 }
 
-# 🔹 Daftar file sertifikat (JPG format) di folder assets
+# 🔹 Daftar file sertifikat manual (JPG format)
 CERTIFICATES = [
     "sertifikat_asprak1.JPG",
     "sertifikat_asprak2.JPG",
@@ -60,7 +60,7 @@ CERTIFICATES = [
 
 # Sidebar
 with st.sidebar:
-    st.image("assets/foto buat ijazah.jpg", caption=PROFILE["name"], use_container_width=True)
+    st.image("foto buat ijazah.jpg", caption=PROFILE["name"], use_container_width=True)
     st.markdown(f"### {PROFILE['name']}")
     st.markdown(f"**{PROFILE['role']}**")
     st.caption(f"📍 {PROFILE['location']}")
@@ -107,9 +107,9 @@ for p in PROFILE["projects"]:
 
     if "images" in p:
         for img in p["images"]:
-            st.image(f"assets/{img}", use_container_width=True)
+            st.image(img, use_container_width=True)
     elif "image" in p:
-        st.image(f"assets/{p['image']}", use_container_width=True)
+        st.image(p["image"], use_container_width=True)
 
     st.write(f"**Tags:** {', '.join(p['tags'])}")
     st.write(p["desc"])
@@ -121,12 +121,11 @@ st.write("Berikut sertifikat resmi saya:")
 
 if CERTIFICATES:
     for i, cert in enumerate(CERTIFICATES, start=1):
-        path = f"assets/{cert}"
-        if os.path.exists(path):
+        if os.path.exists(cert):
             st.subheader(f"Sertifikat {i}")
-            st.image(path, use_container_width=True)
+            st.image(cert, use_container_width=True)
 
-            with open(path, "rb") as img_file:
+            with open(cert, "rb") as img_file:
                 st.download_button(
                     label=f"⬇️ Download Sertifikat {i}",
                     data=img_file,
@@ -147,5 +146,3 @@ st.write(f"**Nama:** {contact['name']}")
 st.write(f"**Email:** {contact['email']}")
 st.write(f"**Phone Number:** {contact['phone number']}")
 st.write(f"**Pesan:** {contact['message']}")
-
-
