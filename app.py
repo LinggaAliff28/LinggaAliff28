@@ -37,7 +37,7 @@ PROFILE = {
             "year": "2025",
             "tags": ["IoT", "Raspberry Pi", "FM Radio"],
             "desc": "Proyek ini merupakan implementasi sistem Radio FM dengan layanan Radio Data System (RDS) menggunakan Raspberry Pi sebagai pemancar (transmitter) dan ESP32 sebagai penerima (receiver). Raspberry Pi diprogram untuk menghasilkan sinyal audio yang disisipkan dengan data RDS (seperti judul lagu, nama stasiun, atau informasi tambahan), kemudian dipancarkan melalui modulasi FM. Di sisi penerima, ESP32 digunakan untuk menangkap sinyal FM sekaligus membaca data RDS yang terkandung di dalamnya. Hasil decoding dari ESP32 dapat ditampilkan pada layar LCD/OLED, atau dikirim melalui komunikasi serial ke komputer/antarmuka monitoring.",
-            "images": ["pengujian 2.JPG", "pengujian 1.JPG"],
+            "images": ["pengujian 2.jpg", "pengujian 1.jpg"],
         },
     ],
     "contact": {
@@ -50,12 +50,12 @@ PROFILE = {
 
 # 🔹 Daftar file sertifikat manual (JPG format)
 CERTIFICATES = [
-    "sertifikat_asprak1.JPG",
-    "sertifikat_asprak2.JPG",
-    "sertifikat_asprak3.JPG",
-    "sertifikat_cisco1.JPG",
-    "sertifikat_cisco2.JPG",
-    "sertifikat magang.JPG",
+    "sertifikat_asprak1.jpg",
+    "sertifikat_asprak2.jpg",
+    "sertifikat_asprak3.jpg",
+    "sertifikat_cisco1.jpg",
+    "sertifikat_cisco2.jpg",
+    "sertifikat magang.jpg",
 ]
 
 # Sidebar
